@@ -27,25 +27,33 @@
 
 // console.log(user);
 
-let people = [
-  {
-    firstname: "Jaren",
-    lastname: "Costales",
-    age: 23,
-  },
-  {
-    firstname: "Orly",
-    lastname: "Villaruel",
-    age: 23,
-  },
-  {
-    firstname: "Chaun",
-    lastname: "Fondales",
-    age: 15,
-  },
-];
-for (let i = 0; i < people.length; i++) {
-  console.log(`First Name : ${people[i].firstname}`);
-  console.log(`Last Name  : ${people[i].lastname}`);
-  console.log(`Age        : ${people[i].age}`);
+// 
+// Step 1: Declare a function
+function calculateGrade(name, score) {
+  
+  // Step 2: Use condition to decide the grade
+  
+  let grade;
+
+  if (score >= 90) {
+    grade = "A";
+  } else if (score >= 80) {
+    grade = "B";
+  } else if (score >= 70) {
+    grade = "C";
+  } else if (score >= 60) {
+    grade = "D";
+  } else {
+    grade = "F";
+  }
+
+  // Step 3: Return a message (output)
+  return `Student: ${name} | Score: ${score} | Grade: ${grade}`;
 }
+
+// Step 4: Call the function multiple times
+console.log(calculateGrade("Jaren", 95));
+console.log(calculateGrade("Norman", 82));
+console.log(calculateGrade("Faith", 67));
+console.log(calculateGrade("Mika", 50));
+
